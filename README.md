@@ -3,4 +3,4 @@ Trouble Shooting
 
 #Git
 ---
-<충돌오류>
+[충돌오류](https://github.com/kabommm/error-archive/issues/2)
