@@ -14,6 +14,15 @@ Trouble Shooting
 # 해결책 및 결론
 
 ```
+<head>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
+    <meta name="_csrf" th:content="${_csrf.token}">
+</head>
+
+...
+
+<script th:inline="javascript">
+
 var header = $("meta[name='_csrf_header']").attr('content');
 var token = $("meta[name='_csrf']").attr('content');
 
@@ -32,6 +41,10 @@ $.ajax({
         ...
     }
 })
+
+...
+
+</script>
 ```
 
 # Reference
