@@ -46,6 +46,7 @@ $.ajax({
 
 </script>
 ```
+위와 같이 jQuery ajax 요청시 csrf 값을 요청 전에 헤더에 담아서 보내면 이후 전송되는 Ajax 호출의 header에 csrf token이 추가되어 전송되기 때문에 csrf token으로 인한 403 에러는 발생하지 않는다.
 
 # Reference
 
