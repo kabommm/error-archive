@@ -35,6 +35,7 @@ public AuthenticationManager authenticationManagerBean() throws Exception {
 
 위의 변경 코드로도 StackOverflow가 발생하여 아래와 같이 코드를 수정하였다.
 
+```
 @Bean   //스프링 시큐리티의 인증(로그인 구현시 사용)
 AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception{
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -42,6 +43,7 @@ AuthenticationManager authenticationManager(AuthenticationConfiguration authenti
         provider.setPasswordEncoder(passwordEncoder());
         return new ProviderManager(provider);
 }
+```
 
 # Reference
 
